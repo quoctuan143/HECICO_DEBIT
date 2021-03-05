@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:APP_GACH_NO.Helpers"
+             xmlns:sfbutton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:sfinputtext="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+                 mc:Ignorable="d"             
+             CloseWhenBackgroundIsClicked="False"
+             x:Class="APP_GACH_NO.Dialog.MessageXacThucMatKhau">
+    <pages:PopupPage.Animation >
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame CornerRadius="15"
+           Margin="20"
+               Padding="0"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="Center">
+        <AbsoluteLayout HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+            <Image AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="1,0,25,25"
+                   Margin="0,0,0,0">
+                <Image.Source>
+                    <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static local:FontIconClass.CloseCircle}}" Size="25" Color="Red"/>
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="imgClose" Command="{Binding CloseCommand}"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <StackLayout HorizontalOptions="FillAndExpand" Spacing="20" Margin="20" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1">
+
+                <Image HorizontalOptions="CenterAndExpand">
+                    <Image.Source>
+                        <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static local:FontIconClass.CommentQuestion}}" Size="50" Color="White" />
+                    </Image.Source>
+                </Image>
+                <Label x:Name="lblMessage" Style="{StaticResource styleLableWhite}" FontSize="16"  Text="Vui lòng xác thực lại mật khẩu" 
+                       Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+
+                <sfinputtext:SfTextInputLayout                                              
+                                               LeadingViewPosition="Inside"
+                                               HeightRequest="70"
+                                               OutlineCornerRadius="30"   
+                                               BackgroundColor="Transparent"
+                                               UnfocusedColor="White"
+                                               FocusedColor="White"      
+                                               EnablePasswordVisibilityToggle="True"  
+                                               ContainerType="Outlined">
+                    <Entry x:Name="txtPassword" HorizontalOptions="FillAndExpand" Style="{StaticResource styleEntryWhite}"  
+                           ClearButtonVisibility="WhileEditing"
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Center"
+                           MaxLength="6"
+                           IsPassword="True"
+                           FontSize="25"
+                           Keyboard="Numeric"
+                           Placeholder="Password"
+                           VerticalTextAlignment="Center"
+                           Text="{Binding Password , Mode=TwoWay}"
+                                       />
+                    <sfinputtext:SfTextInputLayout.LeadingView>
+                        <Image >
+                            <Image.Source>
+                                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static local:FontIconClass.Key}}" Color="White" Size="20"/>
+                            </Image.Source>
+                        </Image>
+                    </sfinputtext:SfTextInputLayout.LeadingView>
+                </sfinputtext:SfTextInputLayout>
+
+                <StackLayout Spacing="0" HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" 
+                         Orientation="Horizontal"                        
+                         >
+                    <sfbutton:SfButton  Grid.Column="0" 
+                                        x:Name="btnOK" 
+                                        Text="OK" FontSize="20"   
+                                        ImageSource="ok.png" 
+                                        Command="{Binding XacThucCommand}"
+                                        HorizontalOptions="FillAndExpand" 
+                                        Style="{StaticResource sfbuttonCancel}"
+                                        HeightRequest="50">
+                    </sfbutton:SfButton>
+                </StackLayout>
+
+            </StackLayout>
+        </AbsoluteLayout>
+        <Frame.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                                         EndPoint="1,0">
+                <GradientStop Color="Green"
+                                                      Offset="0.1"/>
+                <GradientStop Color="#26C986"
+                                                      Offset="1.0"/>
+            </LinearGradientBrush>
+        </Frame.Background>
+    </Frame>
+
+</pages:PopupPage>

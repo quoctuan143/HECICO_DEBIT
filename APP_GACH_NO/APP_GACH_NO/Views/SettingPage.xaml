@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             Title="Cài đặt"
+             x:Class="APP_GACH_NO.Views.SettingPage">        
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Label Text="Xác thực bằng :" VerticalTextAlignment="Center" Style="{StaticResource styleLable}" FontSize="16"/>
+                <SyncfusionButton:SfRadioGroup Orientation="Horizontal" CheckedChanged="SfRadioGroup_CheckedChanged">
+                    <SyncfusionButton:SfRadioButton x:Name="radVanTay" Text="Vân tay"  />
+                    <SyncfusionButton:SfRadioButton x:Name="radMatKhau" Text="Mật khẩu" />                      
+                </SyncfusionButton:SfRadioGroup>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

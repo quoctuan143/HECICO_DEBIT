@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helper="clr-namespace:APP_GACH_NO.Helpers"
+             Title="Thông tin hóa đơn"
+             x:Class="APP_GACH_NO.Views.Lich_Su_Thanh_Toan.LichSuThanhToanTheoKhachHangPage">
+    <ScrollView >
+        <StackLayout Padding="10" HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand">
+            <Label Text="THÔNG TIN KHÁCH HÀNG" FontSize="20" Style="{StaticResource styleLableGreen}"/>
+            <Frame CornerRadius="10">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             Spacing="15">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Mã khách hàng" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding TongHop.MA_KHANG}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"   VerticalTextAlignment="Center"
+                               FontSize="16"/>
+                    </StackLayout>
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Tên khách hàng" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding TongHop.TEN_KHANG}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="End"
+                               WidthRequest="160"
+                               FontSize="16"/>
+                    </StackLayout>
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Địa chỉ" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding TongHop.DCHI_KHANG}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                                WidthRequest="160"
+                               FontSize="16"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="LỊCH SỬ THANH TOÁN" Style="{StaticResource styleLableGreen}" FontSize="20" Margin="0,10,0,10"/>
+
+            <ListView       HasUnevenRows="True" 
+                            x:Name="listDebit"
+                            ItemsSource="{Binding ListDaThu, Mode=TwoWay}"                               
+                            SelectionMode="None"
+                            IsRefreshing="{Binding IsBusy}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="10"  Padding="0">
+                                <Grid ColumnDefinitions="1*,8.5*" Margin="10,10,10,0">
+                                    <Image Grid.Column="0" WidthRequest="20" HeightRequest="20" Aspect="AspectFit" Source="hoadon.png">
+                                        <!--<Image.Source>
+                                            <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.PlaylistCheck}}" Color="White" Size="25"/>
+                                        </Image.Source>-->
+                                    </Image>
+                                    <StackLayout Grid.Column="1" Spacing="5">
+                                        <Label Text="Thanh toán công ty điện Hecico" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>                                        
+                                        <Label Text="{Binding NGAY_NOP , StringFormat='{0:dd/MM/yyyy}'}" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
+                                        <StackLayout Orientation="Horizontal" Padding="0">
+                                            <Label Text="Thành công" Style="{StaticResource styleLableWhite}" VerticalTextAlignment="Center"/>
+                                            <Label Text="{Binding TIEN_DIEN , StringFormat = '{0:#,###}'}" Style="{StaticResource styleLableWhite}" 
+                                                   FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
+                                            <Label Text="đ" Style="{StaticResource styleLableWhite}" FontSize="14" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                        </StackLayout>
+                                        
+                                    </StackLayout>
+                                </Grid>
+                                <Frame.Background>
+                                    <LinearGradientBrush StartPoint="0,0"
+                                                         EndPoint="1,0">
+                                        <GradientStop Color="Green"
+                                                      Offset="0.1"/>
+                                        <GradientStop Color="#26C986"
+                                                      Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Frame.Background>
+                            </Frame>
+
+                        </ViewCell>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+   
+</ContentPage>

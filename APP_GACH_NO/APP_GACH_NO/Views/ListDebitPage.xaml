@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Danh sách công nợ"                
+             xmlns:converter="clr-namespace:APP_GACH_NO.Converter" 
+             xmlns:sfcombox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms" 
+             xmlns:sfinputtext="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:helper="clr-namespace:APP_GACH_NO.Helpers"
+             x:Class="APP_GACH_NO.Views.ListDebitPage">
+    <ContentPage.Resources>
+        <ResourceDictionary >
+            <converter:Convert_TrangThaiThanhToan x:Key="convertTrangThai"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem IconImageSource="scan" Command="{Binding ScanCommand}" />
+    </ContentPage.ToolbarItems>
+    <StackLayout Spacing="0">
+        <Grid ColumnDefinitions="6*,4*">
+            <sfcombox:SfComboBox  x:Name="cbTram" Watermark="Chọn trạm"   
+                             DataSource="{Binding ListTram , Mode=TwoWay}"  
+                             HorizontalOptions="FillAndExpand"                              
+                             NoResultsFoundText="Không tìm trạm này" 
+                             DisplayMemberPath="TEN_TRAM" 
+                             SelectedValuePath="MA_TRAM"
+                             Grid.Column="0"
+                                  HeightRequest="{OnPlatform iOS=50 , Android=70}"
+                             Style="{StaticResource styleCombobox}" 
+                             SelectionChanged="cbTram_SelectionChanged"
+                             IsEditableMode="True"   >
+
+            </sfcombox:SfComboBox>
+            <sfcombox:SfComboBox  x:Name="cbLo" Watermark="Chọn mã lộ" WatermarkColor="Gray"  
+                             DataSource="{Binding ListLo , Mode=TwoWay}"                             
+                             HorizontalOptions="FillAndExpand" 
+                             NoResultsFoundText="Không tìm thấy lộ này" 
+                             DisplayMemberPath="TEN_LO"         
+                              Grid.Column="1"
+                                  HeightRequest="{OnPlatform iOS=50 , Android=70}"
+                              Style="{StaticResource styleCombobox}"
+                                  SelectionChanged="cbLo_SelectionChanged"
+                                  IsEditableMode="True"  />
+        </Grid>
+
+        <!--<SearchBar x:Name="txtSearch" Placeholder="Tên khách hàng" Text="{Binding Filter, Mode=TwoWay}" Style="{StaticResource styleSearchBar}"
+                   TextChanged="SearchBar_TextChanged"/>-->
+        <sfinputtext:SfTextInputLayout Hint="Nhập tên hoặc số điện thoại khách hàng"                                                 
+                                               LeadingViewPosition="Inside"
+                                               HeightRequest="50"
+                                               ContainerType="Outlined">
+            <Entry x:Name="search" HorizontalOptions="FillAndExpand" Style="{StaticResource styleEntryGreen}"  
+                   Text="{Binding Filter, Mode=TwoWay}" ClearButtonVisibility="WhileEditing"
+                                       TextChanged="SearchBar_TextChanged"/>
+            <sfinputtext:SfTextInputLayout.LeadingView>
+                <Image >
+                    <Image.Source>
+                        <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.TextSearch}}" Color="Green" Size="20"/>
+                    </Image.Source>
+                </Image>
+            </sfinputtext:SfTextInputLayout.LeadingView>
+        </sfinputtext:SfTextInputLayout>
+        <Grid AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All"
+              HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView       HasUnevenRows="True" 
+                            x:Name="listDebit"
+                            ItemsSource="{Binding ListCongNo, Mode=TwoWay}"                    
+                            SelectionMode="Single"
+                            IsRefreshing="{Binding IsBusy}"
+                            SelectedItem="{Binding SelectKhachHang, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout   Margin="10" >
+                                <StackLayout Grid.Column="1" Spacing="5" Padding="10">
+                                    <StackLayout Orientation="Horizontal" Padding="0">
+                                        <Label Text="Số cột :" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding SOCOT} " Style="{StaticResource styleLableWhite}" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center" 
+                                               HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="Mã KH :" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding MA_KHANG}" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" 
+                                               HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                                    </StackLayout>
+                                    <Label Text="{Binding TEN_KHANG}" Style="{StaticResource styleLableWhite}" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding DTHOAI_KHANG}" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="0">
+                                        <Label Text="{Binding NOI_DUNG}" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding TONG_TIEN , StringFormat = '{0:#,###}'}" Style="{StaticResource styleLableWhite}" FontSize="25" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="End" HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="đ" Style="{StaticResource styleLableWhite}" FontSize="17" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                                <StackLayout.Background>
+                                    <LinearGradientBrush StartPoint="0,0"
+                                                         EndPoint="1,0">
+                                        <GradientStop Color="Green"
+                                                      Offset="0.1"/>
+                                        <GradientStop Color="#26C986"
+                                                      Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </StackLayout.Background>
+
+
+                            </StackLayout>
+
+                        </ViewCell>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0,20,0" >
+            <Label Text="Số Lượng chưa thu : " Style="{StaticResource styleLableGreen}" FontSize="20" VerticalTextAlignment="Center"    />
+            <Label x:Name="lblSoLuongChuaThu" Text="{Binding DemKhachHangChuaThu}" Style="{StaticResource styleLableGreen}" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:sfbutton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             Title="Thông tin hóa đơn"
+             Shell.TabBarIsVisible="False"
+             x:Class="APP_GACH_NO.Views.ThongTinThanhToanPage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10" HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand">
+            <Label Text="THÔNG TIN KHÁCH HÀNG" FontSize="20" Style="{StaticResource styleLableGreen}"/>
+            <Frame CornerRadius="10">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             Spacing="15">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Mã khách hàng" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.MA_KHANG}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"   VerticalTextAlignment="Center"
+                               FontSize="16"/>
+                    </StackLayout>
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Tên khách hàng" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.TEN_KHANG}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="End"
+                               WidthRequest="160"
+                               FontSize="16"/>
+                    </StackLayout>
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"></BoxView>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Số điện thoại" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.DTHOAI_KHANG}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="End"
+                               WidthRequest="160"
+                               FontSize="16"/>
+                    </StackLayout>
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"></BoxView>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Địa chỉ" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.DCHI_KHANG}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"   VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                                WidthRequest="160"
+                               FontSize="16"/>
+                    </StackLayout>
+                </StackLayout>
+
+            </Frame>
+
+            <Label Text="THÔNG TIN THANH TOÁN" Style="{StaticResource styleLableGreen}" FontSize="20" Margin="0,10,0,10"/>
+
+            <Frame CornerRadius="10" HorizontalOptions="FillAndExpand"
+                   >
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                        <Label Text="Điện tiêu thụ" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.DIEN_TTHU , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
+                               FontSize="20"/>
+                        <Label Text="kwh" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                        <Label Text="Tiền điện" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.TIEN_DIEN , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
+                               FontSize="20"/>
+                        <Label Text="đ" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                        <Label Text="Tiền thuế" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.TIEN_THUE , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
+                               FontSize="20"/>
+                        <Label Text="đ" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                        <Label Text="{Binding CongNoKhachHang.NOI_DUNG}" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
+                               VerticalTextAlignment="Center"/>
+                        <Label Text="{Binding CongNoKhachHang.TONG_TIEN , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
+                               FontSize="25"/>
+                        <Label Text="đ" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                    </StackLayout>
+
+                    <Label Text="{Binding CongNoKhachHang.TIEN_BANG_CHU, StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
+                               HorizontalOptions="FillAndExpand"   VerticalTextAlignment="Center" 
+                               FontSize="16"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout VerticalOptions="EndAndExpand" HeightRequest="120">
+                <!--<BoxView HorizontalOptions="FillAndExpand" Color="Gray" HeightRequest="1"></BoxView>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,20,0,20">
+                    <Label Text="Tổng tiền" Style="{StaticResource styleLableGreen}"
+                           FontSize="20" FontAttributes="Bold"></Label>
+                    <Label Text="{Binding CongNoKhachHang.TONG_TIEN , StringFormat='{0:#,###}'}"    
+                           Style="{StaticResource styleLableGreen}"
+                           FontSize="25" FontAttributes="Bold" HorizontalTextAlignment="End" 
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="EndAndExpand"></Label>
+                    <Label Text="đ" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                </StackLayout>-->
+                <sfbutton:SfButton Text="Thanh Toán" HorizontalOptions="FillAndExpand" 
+                                   VerticalOptions="EndAndExpand"
+                                   HeightRequest="50"
+                                   CornerRadius="30"
+                                   Command="{Binding ThanhToanCommand}"
+                                   Style="{StaticResource sfbutton}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

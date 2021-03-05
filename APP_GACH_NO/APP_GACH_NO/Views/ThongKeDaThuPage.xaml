@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_GACH_NO.Views.ThongKeDaThuPage"
+             xmlns:sfGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:local="clr-namespace:APP_GACH_NO.Converter" xmlns:sfinputtext="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:helper="clr-namespace:APP_GACH_NO.Helpers"
+             Title="Tổng hợp công nợ đã thu">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GridStyle x:Key="styleGrid"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+                <sfinputtext:SfTextInputLayout Hint="Từ ngày"  
+                                               IsHintAlwaysFloated="True"
+                                               LeadingViewPosition="Inside"
+                                               HeightRequest="50"                                                   
+                                               ContainerType="Outlined">
+                    <DatePicker Date="{Binding FromDate , Mode=TwoWay }" 
+                            Style="{StaticResource styleDatePicker}"
+                            HorizontalOptions="FillAndExpand"/>
+                    <sfinputtext:SfTextInputLayout.LeadingView>
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Calendar}}" Color="Green"
+                                                 Size="20"/>
+                            </Image.Source>
+                        </Image>
+                    </sfinputtext:SfTextInputLayout.LeadingView>
+
+                </sfinputtext:SfTextInputLayout>
+                <sfinputtext:SfTextInputLayout Hint="Đến ngày" 
+                                               IsHintAlwaysFloated="True"
+                                               LeadingViewPosition="Inside"
+                                               HeightRequest="50"
+                                               ContainerType="Outlined">
+                    <DatePicker Date="{Binding ToDate , Mode=TwoWay}"   
+                            Style="{StaticResource styleDatePicker}"
+                            HorizontalOptions="FillAndExpand" />
+                    <sfinputtext:SfTextInputLayout.LeadingView>
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Calendar}}" Color="Green"
+                                                 Size="20"/>
+                            </Image.Source>
+                        </Image>
+                    </sfinputtext:SfTextInputLayout.LeadingView>
+                </sfinputtext:SfTextInputLayout>
+
+
+            </StackLayout>
+            <sfinputtext:SfTextInputLayout Hint="Nhập tên hoặc số điện thoại khách hàng"                                                 
+                                               LeadingViewPosition="Inside"
+                                               HeightRequest="50"
+                                               ContainerType="Outlined">
+                <Entry x:Name="search" HorizontalOptions="FillAndExpand" Style="{StaticResource styleEntryGreen}"  ClearButtonVisibility="WhileEditing"
+                                       TextChanged="search_TextChanged"/>
+                <sfinputtext:SfTextInputLayout.LeadingView>
+                    <Image >
+                        <Image.Source>
+                            <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.TextSearch}}" Color="Green" Size="20"/>
+                        </Image.Source>
+                    </Image>
+                </sfinputtext:SfTextInputLayout.LeadingView>
+            </sfinputtext:SfTextInputLayout>
+            <Grid x:Name="mGridLayout" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                         AbsoluteLayout.LayoutBounds="1,1,1,1" >
+                <sfGrid:SfDataGrid x:Name="gridThongKe"
+                                   ItemsSource="{Binding ListDaThu,Mode=TwoWay}"
+                                   SelectedItem="{Binding SelectItem,Mode=TwoWay}"
+                                   Style="{StaticResource styleDataGrid}"
+                                   AutoExpandGroups ="False"
+                                   ColumnSizer="LastColumnFill"
+                                   GridStyle="{StaticResource styleGrid}"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   EnableDataVirtualization="True"
+                                   >
+                    <sfGrid:SfDataGrid.Columns >
+                        <sfGrid:GridDateTimeColumn MappingName="NGAY_NOP" HeaderText="NGÀY THU" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80"/>
+                        <sfGrid:GridTextColumn MappingName="HOADON_ID" HeaderText="ID HÓA ĐƠN" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80"/>
+                        <sfGrid:GridTextColumn MappingName="MA_KHANG" HeaderText="MÃ KHÁCH HÀNG" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="100"/>
+                        <sfGrid:GridTemplateColumn MappingName="TEN_KHANG" HeaderText="TÊN KHÁCH HÀNG" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="140">
+                            <sfGrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding TEN_KHANG }" Style="{StaticResource styleLable}" Padding="5,0,0,0" FontSize="14"  />
+                                </DataTemplate>
+                            </sfGrid:GridTemplateColumn.CellTemplate>
+                        </sfGrid:GridTemplateColumn>
+                        <sfGrid:GridTextColumn MappingName="DTHOAI_KHANG" HeaderText="SỐ Đ.THOẠI" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="100"/>
+                        <sfGrid:GridTemplateColumn MappingName="DCHI_KHANG" HeaderText="ĐỊA CHỈ" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="160">
+                            <sfGrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding DCHI_KHANG }" Style="{StaticResource styleLable}" Padding="5,0,0,0" FontSize="14" />
+                                </DataTemplate>
+                            </sfGrid:GridTemplateColumn.CellTemplate>
+                        </sfGrid:GridTemplateColumn>
+
+                        <sfGrid:GridTemplateColumn MappingName="TONG_TIEN"   HeaderText="SỐ TIỀN" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80">
+                            <sfGrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding TONG_TIEN , StringFormat = '{0:#,###}'}" Style="{StaticResource styleLable}" Padding="5,0,0,0" FontSize="14"/>
+                                </DataTemplate>
+                            </sfGrid:GridTemplateColumn.CellTemplate>
+                        </sfGrid:GridTemplateColumn>
+                    </sfGrid:SfDataGrid.Columns>
+                    <sfGrid:SfDataGrid.TableSummaryRows>
+                        <sfGrid:GridTableSummaryRow Title="Tổng tiền :{TotalSalary}" 
+                                Position="Bottom"
+                                ShowSummaryInRow="True">
+                            <sfGrid:GridTableSummaryRow.SummaryColumns>
+                                <sfGrid:GridSummaryColumn Name="TotalSalary"
+                                      Format="{}{Sum:c}"
+                                      MappingName="TONG_TIEN"                                       
+                                      SummaryType="DoubleAggregate" />
+
+                            </sfGrid:GridTableSummaryRow.SummaryColumns>
+                        </sfGrid:GridTableSummaryRow>
+                    </sfGrid:SfDataGrid.TableSummaryRows>
+                </sfGrid:SfDataGrid>
+                <ActivityIndicator x:Name="mIndicator" IsRunning="{Binding IsBusy}" Color="CornflowerBlue" VerticalOptions="Center"
+                           HorizontalOptions="Center"  
+                         />
+
+            </Grid>
+            <Grid  VerticalOptions="End" ColumnDefinitions="5*,5*">
+                <sfButton:SfButton Style="{StaticResource sfbutton}" Text="Chi tiết" 
+                                HorizontalOptions="FillAndExpand"
+                                   Grid.Column="0"
+                               Command="{Binding XemChiTietCommand}"/>
+                <sfButton:SfButton Style="{StaticResource sfbuttonCancel}" Text="Hủy gạch nợ" 
+                                HorizontalOptions="FillAndExpand"
+                                   Grid.Column="1"
+                               Command="{Binding HuyGachNoCommand}"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_GACH_NO.Views.RegisterPage"
+              xmlns:ffsgv="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"   
+              xmlns:local="clr-namespace:APP_GACH_NO.Helpers"                            
+              BackgroundColor="#0a1322"
+             Visual="Material"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Spacing="0" >
+            <Grid RowDefinitions="200,*">
+                <AbsoluteLayout Grid.Row="0">
+                    <!--<Image Source="phongcanh.jpg" Aspect="AspectFill"  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></Image>-->
+
+                </AbsoluteLayout>
+
+                <StackLayout Grid.Row="1" Padding="10" Margin="20,-30,20,0" 
+                             BackgroundColor="White" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="money.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" HeightRequest="50" Margin="0,20,0,20"></Image>
+                    <Label Text="RIGISTER" FontSize="30" TextColor="Green" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"
+                           FontAttributes="Italic,Bold"></Label>
+                    <Entry Placeholder="Nhập số điện thoại" Keyboard="Numeric" TextColor="Green" 
+                           PlaceholderColor="Green"
+                           Text="{Binding PhoneNumber , Mode=TwoWay}"
+                           BackgroundColor="Transparent"   ClearButtonVisibility="WhileEditing"></Entry>
+                    <AbsoluteLayout BackgroundColor="Transparent">
+                        <Entry Text="{Binding Password ,Mode=TwoWay}" IsPassword="{Binding IsPasswordShow}" TextColor="Green" 
+                               PlaceholderColor="Green"
+                               Placeholder="Nhập mật khẩu" AbsoluteLayout.LayoutFlags="All"
+                               AbsoluteLayout.LayoutBounds="0,0,1,1"                               
+                               HorizontalOptions="FillAndExpand">
+                        </Entry>
+                        <Image Margin="2"  AbsoluteLayout.LayoutBounds="1,0.5, 30, 30" AbsoluteLayout.LayoutFlags="PositionProportional"
+                              >
+                            <Image.Source>
+                                <FontImageSource FontFamily="UserIcons" Glyph="{x:Static local:FontIconClass.Eye}" Color="Green"></FontImageSource>
+                            </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowHideTapCommand}" NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </AbsoluteLayout>
+                    <Label Text="Quên mật khẩu ?" TextColor="Green" HorizontalOptions="End"></Label>
+                    <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Text="Đăng nhập" Command="{Binding RegisterCommand}" CornerRadius="5"  VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" >
+                            <Button.ImageSource>
+                                <FontImageSource FontFamily="UserIcons"  Glyph="{x:Static local:FontIconClass.Login}" Color="White" ></FontImageSource>
+                            </Button.ImageSource>
+                        </Button>
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
