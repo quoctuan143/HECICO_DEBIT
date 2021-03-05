@@ -1,8 +1,8 @@
-IsIncrementalBuild=false
+IsIncrementalBuild=true
 IsLocal=False
 EnableLLVM=False
 UseConcurrentGC=true
-LinkerBehavior=None
+LinkerBehavior=SdkOnly
 AdditionalSupportedEncodings=
 HttpClientImplementation=HttpClientHandler
 SupportedArchitectures=x86_64
