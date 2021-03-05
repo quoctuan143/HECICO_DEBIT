@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj": {}
+    "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj": {}
   },
   "projects": {
-    "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj": {
+    "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj",
+        "projectUniqueName": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj",
         "projectName": "APP_GACH_NO.Android",
-        "projectPath": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj",
+        "projectPath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.Android\\obj\\",
+        "outputPath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {
-                "projectPath": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj"
+              "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {
+                "projectPath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj"
               }
             }
           }
@@ -138,14 +138,14 @@
         }
       }
     },
-    "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {
+    "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
+        "projectUniqueName": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
         "projectName": "APP_GACH_NO",
-        "projectPath": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
+        "projectPath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO\\obj\\",
+        "outputPath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
