@@ -28,6 +28,7 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>false</MtouchDebug>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchFloat32>true</MtouchFloat32>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
