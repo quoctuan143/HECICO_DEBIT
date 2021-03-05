@@ -43,7 +43,6 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
-		<string>processing</string>
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>12</string>
