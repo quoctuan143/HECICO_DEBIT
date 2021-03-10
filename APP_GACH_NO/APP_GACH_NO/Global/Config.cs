@@ -11,6 +11,7 @@ namespace APP_GACH_NO.Global
         public static string PhoneNumber = "PhoneNumber";
         public static string FullName = "FullName";
         public static string Password = "";
+        public static string Token = "Token";
         public static string AprroveFinger = "AprroveFinger";
         public static string AprrovePassword = "AprrovePassword";
         public static string Url = "http://smart.cpc.vn/hecicoapi/";

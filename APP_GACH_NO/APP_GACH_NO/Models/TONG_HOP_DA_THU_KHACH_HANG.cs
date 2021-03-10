@@ -35,5 +35,6 @@ namespace APP_GACH_NO.Models
         public string SOCOT { get; set; }
         public bool TRANG_THAI { get; set; }
         public DateTime? NGAY_NOP { get; set; }
+        public string TOKEN { get; set; }
     }
 }

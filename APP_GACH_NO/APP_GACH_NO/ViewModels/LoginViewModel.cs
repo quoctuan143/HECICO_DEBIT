@@ -89,6 +89,7 @@ namespace APP_GACH_NO.ViewModels
                         if (Users[0].NGAYHHLUC >= DateTime.Now)
                             Config.IsGachNo = true;
                         else Config.IsGachNo = false;
+                        Preferences.Set(Config.Token, Users[0].TOKEN);
                         HideLoading();
                         App.DemNguoc = 0;
                         await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
@@ -142,6 +143,7 @@ namespace APP_GACH_NO.ViewModels
                     if (Users[0].NGAYHHLUC >= DateTime.Now)
                         Config.IsGachNo = true;
                     else Config.IsGachNo = false;
+                    Preferences.Set(Config.Token, Users[0].TOKEN);
                     HideLoading();
                     App.DemNguoc = 0;
                     await Shell.Current.GoToAsync($"//{nameof(HomePage)}");

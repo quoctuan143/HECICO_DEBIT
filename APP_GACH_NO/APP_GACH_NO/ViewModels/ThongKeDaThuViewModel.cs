@@ -64,6 +64,7 @@ namespace APP_GACH_NO.ViewModels
                         using (HttpClient client = new HttpClient())
                         {
                             client.BaseAddress = new Uri(Config.Url);
+                            SelectItem.TOKEN = Preferences.Get(Config.Token, "");
                             var xoano = client.PostAsJsonAsync("api/hecico/HuyXoaNo?SerialID=" + CrossDevice.Device.DeviceId, SelectItem);
                             HideLoading();
                             await new MessageBox(xoano.Result.Content.ReadAsStringAsync().Result.Replace("\"", "")).Show();
@@ -91,6 +92,7 @@ namespace APP_GACH_NO.ViewModels
                                 {
                                     client.BaseAddress = new Uri(Config.Url);
                                     //string a = JsonConvert.SerializeObject(SelectItem);
+                                    SelectItem.TOKEN = Preferences.Get(Config.Token, "");
                                     var xoano = client.PostAsJsonAsync("api/hecico/HuyXoaNo?SerialID=" + CrossDevice.Device.DeviceId, SelectItem);
                                     HideLoading();
                                     await new MessageBox(xoano.Result.Content.ReadAsStringAsync().Result.Replace("\"", "")).Show();

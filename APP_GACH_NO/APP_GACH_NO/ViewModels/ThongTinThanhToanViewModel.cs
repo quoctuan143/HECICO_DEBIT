@@ -32,6 +32,7 @@ namespace APP_GACH_NO.ViewModels
         public ThongTinThanhToanViewModel(CONG_NO_KHACH_HANG Cn)
         {
             CongNoKhachHang = Cn;
+            CongNoKhachHang.TOKEN = Preferences.Get(Config.Token, "");
             CongNoKhachHang.TIEN_BANG_CHU = "Bằng chữ : " + Config.DocTien(Convert.ToDouble(Cn.TONG_TIEN));
             ThanhToanCommand = new Command(OnThanhToanClicked);
         }

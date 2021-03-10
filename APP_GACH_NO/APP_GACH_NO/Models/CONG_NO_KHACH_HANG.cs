@@ -35,5 +35,6 @@ namespace APP_GACH_NO.Models
         public string NOI_DUNG { get; set; }
         public string SOCOT { get; set; }
         public bool TRANG_THAI { get; set; }
+        public string TOKEN { get; set; }
     }
 }
