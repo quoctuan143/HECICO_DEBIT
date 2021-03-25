@@ -10,6 +10,12 @@ FFImageLoading.Svg.Forms
 FFImageLoading.Svg.Platform
 FormsViewGroup
 ImageCircle.Forms.Plugin
+Microsoft.AppCenter.Analytics.Android.Bindings
+Microsoft.AppCenter.Analytics
+Microsoft.AppCenter.Android.Bindings
+Microsoft.AppCenter.Crashes.Android.Bindings
+Microsoft.AppCenter.Crashes
+Microsoft.AppCenter
 Plugin.Connectivity
 Plugin.CurrentActivity
 Plugin.DeviceInfo

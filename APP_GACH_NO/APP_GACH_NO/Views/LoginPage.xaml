@@ -52,6 +52,7 @@
                 <AbsoluteLayout BackgroundColor="Transparent" Padding="20,0,20,0">
                     <Entry     IsPassword="{Binding IsPasswordShow}" TextColor="White" 
                                PlaceholderColor="White"
+                               Keyboard="Numeric"
                                Text="{Binding Password}"
                                Style="{StaticResource styleEntryWhite}"
                                Placeholder="Nhập mật khẩu" AbsoluteLayout.LayoutFlags="All"                                 

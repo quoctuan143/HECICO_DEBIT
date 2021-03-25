@@ -48,7 +48,11 @@ namespace APP_GACH_NO.ViewModels
         public string FullName { get => _fullname; set { SetProperty(ref _fullname, value); } }
         public LoginViewModel()
         {
-            FullName = Preferences.Get(Config.FullName, "");
+            
+            string str = Config.Url + "api/Hecico/GetTenThuNgan?mathungan=" + Preferences.Get(Config.PhoneNumber, "");
+            var _json = Config.client.GetStringAsync(str).Result;
+            _json = _json.Replace("\\r\\n", "").Replace("\\", "").Replace("\"","");
+            FullName = _json;
             PhoneNumber = Preferences.Get(Config.PhoneNumber, "");
             IsPasswordShow = true;
             LoginCommand = new Command(OnLoginClicked, ValidateLogin);

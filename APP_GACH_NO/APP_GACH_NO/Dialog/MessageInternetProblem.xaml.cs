@@ -15,6 +15,7 @@ namespace APP_GACH_NO.Dialog
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MessageInternetProblem : PopupPage
     {
+        TaskCompletionSource<Boolean> _tsk = null;
         public MessageInternetProblem()
         {
             InitializeComponent();
@@ -22,11 +23,13 @@ namespace APP_GACH_NO.Dialog
         private async void btnOK_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopAllPopupAsync(true);
+            _tsk.SetResult(true );
         }
-        public async Task Show()
+        public async Task<bool> Show()        
         {
+             _tsk = new TaskCompletionSource<bool >();
             await Navigation.PushPopupAsync(this);
-
+            return await _tsk.Task;
         }
     }
 }

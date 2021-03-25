@@ -45,7 +45,7 @@
 		<string>remote-notification</string>
 	</array>
 	<key>CFBundleShortVersionString</key>
-	<string>13</string>
+	<string>14</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -73,7 +73,7 @@
 		<false/>
 	</dict>
 	<key>CFBundleVersion</key>
-	<string>2.3</string>
+	<string>2.4</string>
 	<key>UIRequiresFullScreen</key>
 	<true/>
 </dict>

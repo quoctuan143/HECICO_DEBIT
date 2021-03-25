@@ -35,7 +35,6 @@ E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Debug\netstandard2.0\APP
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Debug\netstandard2.0\APP_GACH_NO.dll
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Debug\netstandard2.0\ref\APP_GACH_NO.dll
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Debug\netstandard2.0\APP_GACH_NO.pdb
-E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\APP_GACH_NO.csprojAssemblyReference.cache
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\App.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Dialog\MessageBox.xaml.g.cs
@@ -53,6 +52,7 @@ E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Vie
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Views\SelectTramLo.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Views\SettingPage.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Views\StartPage.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Views\ThongKeDaThuPage.xaml.g.cs
@@ -64,3 +64,4 @@ E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\Xam
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\APP_GACH_NO.dll
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\ref\APP_GACH_NO.dll
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\APP_GACH_NO.pdb
+E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Debug\netstandard2.0\APP_GACH_NO.csprojAssemblyReference.cache

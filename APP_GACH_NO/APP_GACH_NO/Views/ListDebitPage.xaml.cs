@@ -4,6 +4,7 @@ using APP_GACH_NO.Models;
 using APP_GACH_NO.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,21 @@ namespace APP_GACH_NO.Views
                     ListDebitRefresh();
                     lblSoLuongChuaThu.Text = viewModel.ListCongNo.Where(p => p.TRANG_THAI == false).ToList().Count.ToString();
                 });
+            });
+            MessagingCenter.Subscribe<SelectTramLo, TRAM>(this, "tram", (sender, item) => {
+                txtTram.Text = item.TEN_TRAM ;
+                 matram = item.TEN_TRAM  ;
+                if (matram == "") matram = "Tất Cả";
+                viewModel.LoadDsLo(item.MA_TRAM);
+                txtLo.Text = "Tất Cả";
+                malo = "Tất Cả";
+                ListDebitRefresh();
+            });
+            MessagingCenter.Subscribe<SelectTramLo, TRAM>(this, "lo", (sender, item) => {
+                txtLo.Text = item.TEN_TRAM;
+                malo = item.TEN_TRAM ;
+                if (malo == "") malo = "Tất Cả";
+                ListDebitRefresh();
             });
         }
         protected override void OnAppearing()
@@ -106,7 +122,7 @@ namespace APP_GACH_NO.Views
         {
             try
             {
-                malo = cbLo.Text;
+                //malo = cbLo.Text;
                 if (malo == "") malo = "Tất Cả";
                 ListDebitRefresh();
             }
@@ -115,14 +131,39 @@ namespace APP_GACH_NO.Views
             }
         }
 
+        private async void btnChonTram_Tapped(object sender, EventArgs e)
+        {
+            try
+            {
+                await Navigation.PushModalAsync(new SelectTramLo(viewModel.ListTram, "tram")); ;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private async void btnChonLo_Tapped(object sender, EventArgs e)
+        {
+            ObservableCollection<TRAM> tram = new ObservableCollection<TRAM>();
+            foreach (LO lo in viewModel.ListLo )
+            {
+                TRAM tr = new TRAM { MA_TRAM = lo.MA_LO, TEN_TRAM = lo.TEN_LO };
+                tram.Add(tr);
+            }    
+            await Navigation.PushModalAsync(new SelectTramLo(tram , "lo")); ;
+        }
+
         private void cbTram_SelectionChanged(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
             try
             {
-                matram = cbTram.Text;
+               // matram = cbTram.Text;
                 if (matram == "") matram = "Tất Cả";
-                viewModel.LoadDsLo(cbTram.SelectedValue.ToString());
-                cbLo.SelectedIndex = 0;
+                //viewModel.LoadDsLo(cbTram.SelectedValue.ToString());
+              //  cbLo.SelectedIndex = 0;
                 ListDebitRefresh();
             }
             catch (Exception)

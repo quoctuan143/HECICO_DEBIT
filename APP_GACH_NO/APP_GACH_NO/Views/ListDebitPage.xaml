@@ -15,12 +15,12 @@
     <ContentPage.ToolbarItems >
         <ToolbarItem IconImageSource="scan" Command="{Binding ScanCommand}" />
     </ContentPage.ToolbarItems>
-    <StackLayout Spacing="0">
-        <Grid ColumnDefinitions="6*,4*">
-            <sfcombox:SfComboBox  x:Name="cbTram" Watermark="Chọn trạm"   
+    <StackLayout Spacing="5">
+        <!--<Grid ColumnDefinitions="6*,4*">
+                 <sfcombox:SfComboBox  x:Name="cbTram" Watermark="Chọn trạm"   
                              DataSource="{Binding ListTram , Mode=TwoWay}"  
                              HorizontalOptions="FillAndExpand"                              
-                             NoResultsFoundText="Không tìm trạm này" 
+                             NoResultsFoundText="Không tìm thấy trạm này" 
                              DisplayMemberPath="TEN_TRAM" 
                              SelectedValuePath="MA_TRAM"
                              Grid.Column="0"
@@ -29,8 +29,8 @@
                              SelectionChanged="cbTram_SelectionChanged"
                              IsEditableMode="True"   >
 
-            </sfcombox:SfComboBox>
-            <sfcombox:SfComboBox  x:Name="cbLo" Watermark="Chọn mã lộ" WatermarkColor="Gray"  
+        </sfcombox:SfComboBox>
+        <sfcombox:SfComboBox  x:Name="cbLo" Watermark="Chọn mã lộ" WatermarkColor="Gray"  
                              DataSource="{Binding ListLo , Mode=TwoWay}"                             
                              HorizontalOptions="FillAndExpand" 
                              NoResultsFoundText="Không tìm thấy lộ này" 
@@ -40,8 +40,40 @@
                               Style="{StaticResource styleCombobox}"
                                   SelectionChanged="cbLo_SelectionChanged"
                                   IsEditableMode="True"  />
-        </Grid>
+            
+        </Grid>-->
+        <Grid ColumnDefinitions="6*,4*" Margin="10,10,10,0">
+            <Frame BorderColor="{StaticResource Primary}"   Padding="5"  Grid.Column="0"
+                   HeightRequest="50">
+                <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Label Text="Chọn trạm" FontSize="18" HorizontalOptions="FillAndExpand" x:Name="txtTram" Style="{StaticResource styleLableGreen }"/>
+                    <Image HorizontalOptions="EndAndExpand">
+                        <Image.Source>
+                            <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.TextSearch}}" Color="Green" Size="20"/>
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="btnChonTram" Tapped="btnChonTram_Tapped"   />
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame BorderColor="{StaticResource Primary}"   Padding="5"      Grid.Column="1"
+                   HeightRequest="50">
+                <StackLayout Orientation="Horizontal" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Label Text="Chọn lộ" FontSize="18" HorizontalOptions="FillAndExpand" x:Name="txtLo" Style="{StaticResource styleLableGreen }"/>
+                    <Image HorizontalOptions="EndAndExpand">
+                        <Image.Source>
+                            <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.TextSearch}}" Color="Green" Size="20"/>
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="btnChonLo" Tapped="btnChonLo_Tapped"   />
+                </Frame.GestureRecognizers>
+            </Frame>
 
+        </Grid>
+       
         <!--<SearchBar x:Name="txtSearch" Placeholder="Tên khách hàng" Text="{Binding Filter, Mode=TwoWay}" Style="{StaticResource styleSearchBar}"
                    TextChanged="SearchBar_TextChanged"/>-->
         <sfinputtext:SfTextInputLayout Hint="Nhập tên hoặc số điện thoại khách hàng"                                                 

@@ -25,6 +25,14 @@ namespace APP_GACH_NO.Views
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+           
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                await new MessageInternetProblem().Show();
+                System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
+                return;
+            }
+            
             await Task.Delay(2000);
             App.Current.MainPage = new AppShell();   
         }

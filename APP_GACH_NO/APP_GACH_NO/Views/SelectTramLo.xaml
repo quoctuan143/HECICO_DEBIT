@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_GACH_NO.Views.SelectTramLo">
+    <ContentPage.Content>
+        <StackLayout Margin="20,30,20,0">
+            <Label Text="CHỌN THÔNG TIN" HorizontalOptions="Center" Style="{StaticResource styleLableGreen}" FontSize="20" FontAttributes="Bold"/>
+            <ListView ItemsSource="{Binding ListData,Mode=TwoWay}"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="None"
+                  ItemSelected="ListView_ItemSelected"
+                  x:Name="lstView"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="10">
+                                <Label Text="{Binding TEN_TRAM}" Style="{StaticResource styleLableGreen}" FontSize="17"/>
+                                <BoxView BackgroundColor="{StaticResource Primary}" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -60,7 +60,7 @@ namespace APP_GACH_NO.ViewModels
             catch (Exception)
             {
 
-                ;
+                
             }
         }
 

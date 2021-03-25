@@ -1,10 +1,10 @@
-IsIncrementalBuild=false
+IsIncrementalBuild=true
 IsLocal=True
 EnableLLVM=False
 UseConcurrentGC=true
 LinkerBehavior=SdkOnly
 AdditionalSupportedEncodings=
 HttpClientImplementation=HttpClientHandler
-SupportedArchitectures=ARM64
+SupportedArchitectures=ARMv7
 BuildConfiguration=Debug
 TemplateName={89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}

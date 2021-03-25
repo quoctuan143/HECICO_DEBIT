@@ -29,6 +29,7 @@
                     <AbsoluteLayout BackgroundColor="Transparent">
                         <Entry Text="{Binding Password ,Mode=TwoWay}" IsPassword="{Binding IsPasswordShow}" TextColor="Green" 
                                PlaceholderColor="Green"
+                               Keyboard="Numeric"
                                Placeholder="Nhập mật khẩu" AbsoluteLayout.LayoutFlags="All"
                                AbsoluteLayout.LayoutBounds="0,0,1,1"                               
                                HorizontalOptions="FillAndExpand">
