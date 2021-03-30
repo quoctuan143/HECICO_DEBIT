@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GWpVr4oRJ+ZUzCw7GbCa7ty6+PfEwXm4NqRAz1Rhpb7iDrOdfBUxPb0VnVSzwzUXz2KbSPprhMUsL83SkMS1QA==",
+  "dgSpecHash": "M2SfgL/UPicS94fgD+JFTkV+HFtQZ3ylJlILOq9vzwJzcsVfZ0tsF62aLGNL+t+xAn6gzwgFhmMCZDYdv3VV6w==",
   "success": true,
-  "projectFilePath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj",
+  "projectFilePath": "D:\\SOURCE CODE\\GIT_HUB_EMEC\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO.Android\\APP_GACH_NO.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\acr.core\\2.2.0\\acr.core.2.2.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\acr.deviceinfo\\6.5.0\\acr.deviceinfo.6.5.0.nupkg.sha512",

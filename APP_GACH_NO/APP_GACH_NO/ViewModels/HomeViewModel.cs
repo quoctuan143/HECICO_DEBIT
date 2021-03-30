@@ -36,7 +36,7 @@ namespace APP_GACH_NO.ViewModels
         public ObservableCollection<String> ListImage { get; set; }
         public HomeViewModel()
         {
-            ListImage = new ObservableCollection<string> { "http://smart.cpc.vn/HecicoApi/image/hinh1.jpg" };
+            ListImage = new ObservableCollection<string> { Config.Url + "/image/hinh1.jpg" };
             Users = new User { THUNGAN = Preferences.Get(Config.FullName, ""), MATNGAN = Preferences.Get(Config.PhoneNumber, "") };
             SelectDebitCommand = new Command(OnSelectDebitClicked);
             ScanCommand = new Command(OnScanClicked);

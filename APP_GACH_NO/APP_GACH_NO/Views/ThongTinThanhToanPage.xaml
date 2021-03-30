@@ -25,7 +25,7 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                         <Label Text="Tên khách hàng" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
                                VerticalTextAlignment="Center"/>
-                        <Label Text="{Binding CongNoKhachHang.TEN_KHANG}" Style="{StaticResource styleLableGreen}" 
+                        <Label Text="{Binding CongNoKhachHang.TEN_KHANG}" TextTransform="Uppercase" Style="{StaticResource styleLableGreen}" 
                                HorizontalOptions="EndAndExpand" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="End"
                                WidthRequest="160"
                                FontSize="16"/>

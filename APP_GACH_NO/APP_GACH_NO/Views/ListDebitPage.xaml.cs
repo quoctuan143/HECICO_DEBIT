@@ -82,8 +82,8 @@ namespace APP_GACH_NO.Views
             {
                 if (!string.IsNullOrWhiteSpace(text))
                 {
-                    listDebit.ItemsSource = viewModel.ListCongNo.Where(p => (p.TEN_KHANG.ToLower().Contains(text) || p.DTHOAI_KHANG.ToLower().Contains(text)
-                || p.HOADON_ID.ToLower().Contains(text)) && p.TRANG_THAI == false);
+                    listDebit.ItemsSource = viewModel.ListCongNo.Where(p => (p.TEN_KHANG.ToLower().Contains(text) || p.DTHOAI_KHANG.ToLower().Contains(text) || p.MA_KHANG.ToLower().Contains(text)
+               ) && p.TRANG_THAI == false);
                 }
                 else
                 {
@@ -94,8 +94,8 @@ namespace APP_GACH_NO.Views
             {
                 if (!string.IsNullOrWhiteSpace(text))
                 {
-                    listDebit.ItemsSource = viewModel.ListCongNo.Where(p => (p.TEN_KHANG.ToLower().Contains(text) || p.DTHOAI_KHANG.ToLower().Contains(text)
-                || p.HOADON_ID.ToLower().Contains(text)) && p.TRANG_THAI == false && p.TENTRAM == matram);
+                    listDebit.ItemsSource = viewModel.ListCongNo.Where(p => (p.TEN_KHANG.ToLower().Contains(text) || p.DTHOAI_KHANG.ToLower().Contains(text) || p.MA_KHANG.ToLower().Contains(text)
+                ) && p.TRANG_THAI == false && p.TENTRAM == matram);
                 }
                 else
                 {
@@ -106,8 +106,8 @@ namespace APP_GACH_NO.Views
             {
                 if (!string.IsNullOrWhiteSpace(text))
                 {
-                    listDebit.ItemsSource = viewModel.ListCongNo.Where(p => (p.TEN_KHANG.ToLower().Contains(text) || p.DTHOAI_KHANG.ToLower().Contains(text)
-                || p.HOADON_ID.ToLower().Contains(text)) && p.TRANG_THAI == false && p.TENTRAM == matram && p.TENLO == malo);
+                    listDebit.ItemsSource = viewModel.ListCongNo.Where(p => (p.TEN_KHANG.ToLower().Contains(text) || p.DTHOAI_KHANG.ToLower().Contains(text) || p.MA_KHANG.ToLower().Contains(text)
+                ) && p.TRANG_THAI == false && p.TENTRAM == matram && p.TENLO == malo);
                 }
                 else
                 {

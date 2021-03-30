@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             Title="Danh sách công nợ"                
+             Title="DANH SÁCH NỢ"                
              xmlns:converter="clr-namespace:APP_GACH_NO.Converter" 
              xmlns:sfcombox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms" 
              xmlns:sfinputtext="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
@@ -104,15 +104,17 @@
                         <ViewCell>
                             <StackLayout   Margin="10" >
                                 <StackLayout Grid.Column="1" Spacing="5" Padding="10">
+                                    <Label Text="{Binding TEN_KHANG}" TextTransform="Uppercase" Style="{StaticResource styleLableWhite}" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
                                     <StackLayout Orientation="Horizontal" Padding="0">
+                                        <Label Text="Mã KH :" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding MA_KHANG}" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center" 
+                                               HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
                                         <Label Text="Số cột :" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
                                         <Label Text="{Binding SOCOT} " Style="{StaticResource styleLableWhite}" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center" 
                                                HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
-                                        <Label Text="Mã KH :" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
-                                        <Label Text="{Binding MA_KHANG}" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" 
-                                               HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                                        
                                     </StackLayout>
-                                    <Label Text="{Binding TEN_KHANG}" Style="{StaticResource styleLableWhite}" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                    
                                     <Label Text="{Binding DTHOAI_KHANG}" Style="{StaticResource styleLableWhite}" FontSize="16" VerticalTextAlignment="Center"/>
 
                                     <StackLayout Orientation="Horizontal" Padding="0">
@@ -145,7 +147,7 @@
         </Grid>
 
         <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0,20,0" >
-            <Label Text="Số Lượng chưa thu : " Style="{StaticResource styleLableGreen}" FontSize="20" VerticalTextAlignment="Center"    />
+            <Label Text="Tổng số: " Style="{StaticResource styleLableGreen}" FontSize="20" VerticalTextAlignment="Center"    />
             <Label x:Name="lblSoLuongChuaThu" Text="{Binding DemKhachHangChuaThu}" Style="{StaticResource styleLableGreen}" FontSize="20" FontAttributes="Bold" VerticalTextAlignment="Center"/>
         </StackLayout>
     </StackLayout>

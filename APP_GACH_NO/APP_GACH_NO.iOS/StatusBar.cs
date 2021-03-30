@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 [assembly: Dependency(typeof(StatusBar))]
 namespace APP_GACH_NO.iOS
-{
+{ 
    public class StatusBar : IStatusBar
     {
         public void HideStatusBar()

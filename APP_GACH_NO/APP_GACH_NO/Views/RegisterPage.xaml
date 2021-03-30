@@ -4,30 +4,30 @@
              x:Class="APP_GACH_NO.Views.RegisterPage"
               xmlns:ffsgv="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"   
               xmlns:local="clr-namespace:APP_GACH_NO.Helpers"                            
-              BackgroundColor="#0a1322"
+              BackgroundColor="Black"
              Visual="Material"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Spacing="0" >
-            <Grid RowDefinitions="200,*">
+            <Grid RowDefinitions="100,*">
                 <AbsoluteLayout Grid.Row="0">
                     <!--<Image Source="phongcanh.jpg" Aspect="AspectFill"  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></Image>-->
 
                 </AbsoluteLayout>
 
-                <StackLayout Grid.Row="1" Padding="10" Margin="20,-30,20,0" 
-                             BackgroundColor="White" 
+                <StackLayout Grid.Row="1" Padding="10" Margin="20,30,20,0" 
+                             BackgroundColor="Transparent" 
                              VerticalOptions="FillAndExpand"
                              HorizontalOptions="FillAndExpand">
-                    <Image Source="money.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" HeightRequest="50" Margin="0,20,0,20"></Image>
-                    <Label Text="RIGISTER" FontSize="30" TextColor="Green" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"
-                           FontAttributes="Italic,Bold"></Label>
-                    <Entry Placeholder="Nhập số điện thoại" Keyboard="Numeric" TextColor="Green" 
+                    <Image Source="logo.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" HeightRequest="70" Margin="0,20,0,10"></Image>
+                    <Label Text="ĐĂNG KÝ TÀI KHOẢN" FontSize="24" Style="{StaticResource styleLableWhite}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"></Label>
+                    <Entry Placeholder="Nhập số điện thoại" Keyboard="Numeric" TextColor="White" 
                            PlaceholderColor="Green"
                            Text="{Binding PhoneNumber , Mode=TwoWay}"
                            BackgroundColor="Transparent"   ClearButtonVisibility="WhileEditing"></Entry>
                     <AbsoluteLayout BackgroundColor="Transparent">
-                        <Entry Text="{Binding Password ,Mode=TwoWay}" IsPassword="{Binding IsPasswordShow}" TextColor="Green" 
+                        <Entry Text="{Binding Password ,Mode=TwoWay}" IsPassword="{Binding IsPasswordShow}" TextColor="White" 
                                PlaceholderColor="Green"
                                Keyboard="Numeric"
                                Placeholder="Nhập mật khẩu" AbsoluteLayout.LayoutFlags="All"

@@ -6,7 +6,7 @@
              xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:local="clr-namespace:APP_GACH_NO.Converter" xmlns:sfinputtext="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:helper="clr-namespace:APP_GACH_NO.Helpers"
-             Title="Tổng hợp công nợ đã thu">
+             Title="DANH SÁCH THU">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GridStyle x:Key="styleGrid"/>
@@ -82,44 +82,48 @@
                                    EnableDataVirtualization="True"
                                    >
                     <sfGrid:SfDataGrid.Columns >
-                        <sfGrid:GridDateTimeColumn MappingName="NGAY_NOP" HeaderText="NGÀY THU" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80"/>
-                        <sfGrid:GridTextColumn MappingName="HOADON_ID" HeaderText="ID HÓA ĐƠN" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80"/>
-                        <sfGrid:GridTextColumn MappingName="MA_KHANG" HeaderText="MÃ KHÁCH HÀNG" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="100"/>
-                        <sfGrid:GridTemplateColumn MappingName="TEN_KHANG" HeaderText="TÊN KHÁCH HÀNG" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="140">
+                        <sfGrid:GridDateTimeColumn MappingName="NGAY_NOP" HeaderText="Ngày" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80"/>                       
+                        
+                        <sfGrid:GridTemplateColumn MappingName="TEN_KHANG" HeaderText="Khách Hàng" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="140">
                             <sfGrid:GridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Text="{Binding TEN_KHANG }" Style="{StaticResource styleLable}" Padding="5,0,0,0" FontSize="14"  />
                                 </DataTemplate>
                             </sfGrid:GridTemplateColumn.CellTemplate>
                         </sfGrid:GridTemplateColumn>
-                        <sfGrid:GridTextColumn MappingName="DTHOAI_KHANG" HeaderText="SỐ Đ.THOẠI" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="100"/>
-                        <sfGrid:GridTemplateColumn MappingName="DCHI_KHANG" HeaderText="ĐỊA CHỈ" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="160">
+                        <sfGrid:GridTemplateColumn MappingName="TONG_TIEN"   HeaderText="Số tiền" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80">
+                            <sfGrid:GridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding TONG_TIEN , StringFormat = '{0:#,###}'}" Style="{StaticResource styleLable}" FontAttributes="Bold" Padding="5,0,5,0" FontSize="14" HorizontalTextAlignment="End"/>
+                                </DataTemplate>
+                            </sfGrid:GridTemplateColumn.CellTemplate>
+                        </sfGrid:GridTemplateColumn>
+                        <sfGrid:GridTextColumn MappingName="MA_KHANG" HeaderText="Mã KH" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="100"/>
+                        <sfGrid:GridTemplateColumn MappingName="DCHI_KHANG" HeaderText="Địa chỉ" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="160">
                             <sfGrid:GridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Text="{Binding DCHI_KHANG }" Style="{StaticResource styleLable}" Padding="5,0,0,0" FontSize="14" />
                                 </DataTemplate>
                             </sfGrid:GridTemplateColumn.CellTemplate>
                         </sfGrid:GridTemplateColumn>
+                        <sfGrid:GridTextColumn MappingName="DTHOAI_KHANG" HeaderText="Điện thoại" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="100"/>
+                       
 
-                        <sfGrid:GridTemplateColumn MappingName="TONG_TIEN"   HeaderText="SỐ TIỀN" HeaderFontAttribute="Bold"   HeaderCellTextSize="16" Width="80">
-                            <sfGrid:GridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Label Text="{Binding TONG_TIEN , StringFormat = '{0:#,###}'}" Style="{StaticResource styleLable}" Padding="5,0,0,0" FontSize="14"/>
-                                </DataTemplate>
-                            </sfGrid:GridTemplateColumn.CellTemplate>
-                        </sfGrid:GridTemplateColumn>
+                       
                     </sfGrid:SfDataGrid.Columns>
                     <sfGrid:SfDataGrid.TableSummaryRows>
-                        <sfGrid:GridTableSummaryRow Title="Tổng tiền :{TotalSalary}" 
+                        <sfGrid:GridTableSummaryRow Title="Tổng tiền: {TotalSalary}"  
+                                             
                                 Position="Bottom"
                                 ShowSummaryInRow="True">
                             <sfGrid:GridTableSummaryRow.SummaryColumns>
                                 <sfGrid:GridSummaryColumn Name="TotalSalary"
                                       Format="{}{Sum:c}"
-                                      MappingName="TONG_TIEN"                                       
+                                      MappingName="TONG_TIEN"     
+                                                      
                                       SummaryType="DoubleAggregate" />
 
-                            </sfGrid:GridTableSummaryRow.SummaryColumns>
+                            </sfGrid:GridTableSummaryRow.SummaryColumns>                           
                         </sfGrid:GridTableSummaryRow>
                     </sfGrid:SfDataGrid.TableSummaryRows>
                 </sfGrid:SfDataGrid>
@@ -128,7 +132,7 @@
                          />
 
             </Grid>
-            <Grid  VerticalOptions="End" ColumnDefinitions="5*,5*">
+            <Grid  VerticalOptions="EndAndExpand" ColumnDefinitions="5*,5*">
                 <sfButton:SfButton Style="{StaticResource sfbutton}" Text="Chi tiết" 
                                 HorizontalOptions="FillAndExpand"
                                    Grid.Column="0"

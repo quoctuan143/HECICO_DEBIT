@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {}
+    "D:\\SOURCE CODE\\GIT_HUB_EMEC\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {}
   },
   "projects": {
-    "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {
+    "D:\\SOURCE CODE\\GIT_HUB_EMEC\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
+        "projectUniqueName": "D:\\SOURCE CODE\\GIT_HUB_EMEC\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
         "projectName": "APP_GACH_NO",
-        "projectPath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
+        "projectPath": "D:\\SOURCE CODE\\GIT_HUB_EMEC\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\APP_GACH_NO.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "E:\\TUAN_SOURCE\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\obj\\",
+        "outputPath": "D:\\SOURCE CODE\\GIT_HUB_EMEC\\HECICO_DEBIT\\APP_GACH_NO\\APP_GACH_NO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -41,6 +42,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Acr.DeviceInfo": {
               "target": "Package",
@@ -131,7 +133,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

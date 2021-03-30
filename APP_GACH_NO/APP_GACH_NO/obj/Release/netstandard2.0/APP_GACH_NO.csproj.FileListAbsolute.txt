@@ -68,3 +68,37 @@ E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Release\netstandard2.0\A
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\XamlC.stamp
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\SelectTramLo.xaml.g.cs
 E:\TUAN_SOURCE\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\APP_GACH_NO.csprojAssemblyReference.cache
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Release\netstandard2.0\APP_GACH_NO.deps.json
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Release\netstandard2.0\APP_GACH_NO.dll
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Release\netstandard2.0\ref\APP_GACH_NO.dll
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\bin\Release\netstandard2.0\APP_GACH_NO.pdb
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\App.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\AppShell.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Dialog\MessageBox.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Dialog\MessageChangePassword.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Dialog\MessageInternetProblem.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Dialog\MessageTimeOut.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Dialog\MessageXacThucMatKhau.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Dialog\MessageYesNo.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\AboutPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\HomePage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\Lich_Su_Thanh_Toan\LichSuThanhToanTheoKhachHangPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\ListDebitPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\RegisterPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\SelectTramLo.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\SettingPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\StartPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\ThongKeDaThuPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\Views\ThongTinThanhToanPage.xaml.g.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\APP_GACH_NO.AssemblyInfoInputs.cache
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\APP_GACH_NO.AssemblyInfo.cs
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\APP_GACH_NO.csproj.CoreCompileInputs.cache
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\XamlC.stamp
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\APP_GACH_NO.dll
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\ref\APP_GACH_NO.dll
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\APP_GACH_NO.pdb
+D:\SOURCE CODE\GIT_HUB_EMEC\HECICO_DEBIT\APP_GACH_NO\APP_GACH_NO\obj\Release\netstandard2.0\APP_GACH_NO.csprojAssemblyReference.cache

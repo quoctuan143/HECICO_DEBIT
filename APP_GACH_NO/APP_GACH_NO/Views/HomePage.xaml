@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              BackgroundImageSource="hinhnen.png"
+              BackgroundColor="#0c832f"
              xmlns:helper="clr-namespace:APP_GACH_NO.Helpers"       
               xmlns:local="clr-namespace:APP_GACH_NO.Helpers"  
              x:Class="APP_GACH_NO.Views.HomePage">
@@ -10,8 +10,7 @@
             <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" Style="{DynamicResource styleLableWhite}">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="HEC "  FontAttributes="Bold" FontSize="25"/>
-                        <Span Text="Debit" FontSize="25"></Span>
+                        <Span Text="HEC DEBIT"  FontAttributes="Bold" FontSize="25"/>                       
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
@@ -77,7 +76,7 @@
                                 </Image.GestureRecognizers>
                             </Image>
                         </Frame>
-                        <Label Text="Danh sách công nợ" Style="{StaticResource styleLableWhite}" FontSize="14" 
+                        <Label Text="Danh sách nợ" Style="{StaticResource styleLableWhite}" FontSize="14" 
                                WidthRequest="80"
                                HorizontalTextAlignment="Center" LineBreakMode="WordWrap"></Label>
                     </StackLayout>
@@ -98,7 +97,7 @@
                                 </Image.GestureRecognizers>
                             </Image>
                         </Frame>
-                        <Label Text="Thống kê đã thu" Style="{StaticResource styleLableWhite}" FontSize="14" 
+                        <Label Text="Danh sách thu" Style="{StaticResource styleLableWhite}" FontSize="14" 
                                HorizontalTextAlignment="Center"
                                WidthRequest="80"
                                LineBreakMode="WordWrap"></Label>
@@ -150,15 +149,14 @@
 
             </StackLayout>
             <StackLayout HorizontalOptions="FillAndExpand" Spacing="3">
-                <Image Source="tonghopwhite.png" Aspect="AspectFill" WidthRequest="140"
-                               HeightRequest="140" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                <Image Source="tonghopwhite.png" Aspect="AspectFill" WidthRequest="120"
+                               HeightRequest="120" HorizontalOptions="Center" BackgroundColor="Transparent"/>
                 <Label Text="{Binding Users.THUNGAN}" Style="{StaticResource styleLableWhite}" FontSize="20" 
                        HorizontalTextAlignment="Center"/>
                 <Label Text="{Binding Users.MATNGAN}" Style="{StaticResource styleLableWhite}" FontSize="16" HorizontalTextAlignment="Center" />
-
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Label Text="Ngày :" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
-                    <Label Text="{Binding TotalAmount }" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Margin="0,20,0,0">
+                    <Label Text="Xem số thu" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                     <Image VerticalOptions="Center">
                         <Image.Source>
                             <FontImageSource FontFamily="UserIcons" Glyph="{x:Static local:FontIconClass.Eye}" Color="White" Size="16"></FontImageSource>
@@ -168,12 +166,19 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    
+                    <Label Text="Tổng theo ngày :" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                    <Label Text="{Binding TotalAmount }" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                    
+                </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Label Text="Tháng:" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold"/>
+                    <Label Text="Tổng theo tháng:" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold"/>
                     <Label Text="{Binding MonthAmount }" Style="{StaticResource styleLableWhite}" FontSize="16" FontAttributes="Bold"/>
 
                 </StackLayout>
             </StackLayout>
         </StackLayout>
     </Grid>
-</ContentPage>
+</ContentPage>   

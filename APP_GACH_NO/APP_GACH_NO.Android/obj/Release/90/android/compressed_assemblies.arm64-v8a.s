@@ -17,7 +17,7 @@
 
 	/* 1: APP_GACH_NO.dll */
 	/* uncompressed_file_size */
-	.word	1477120
+	.word	1477632
 	/* loaded */
 	.byte	0
 	/* data */
@@ -161,7 +161,7 @@
 
 	/* 17: Java.Interop.dll */
 	/* uncompressed_file_size */
-	.word	164864
+	.word	165376
 	/* loaded */
 	.byte	0
 	/* data */
@@ -170,7 +170,7 @@
 
 	/* 18: Microsoft.AppCenter.Analytics.Android.Bindings.dll */
 	/* uncompressed_file_size */
-	.word	58368
+	.word	58880
 	/* loaded */
 	.byte	0
 	/* data */
@@ -188,7 +188,7 @@
 
 	/* 20: Microsoft.AppCenter.Android.Bindings.dll */
 	/* uncompressed_file_size */
-	.word	316928
+	.word	317952
 	/* loaded */
 	.byte	0
 	/* data */
@@ -197,7 +197,7 @@
 
 	/* 21: Microsoft.AppCenter.Crashes.Android.Bindings.dll */
 	/* uncompressed_file_size */
-	.word	96256
+	.word	96768
 	/* loaded */
 	.byte	0
 	/* data */
@@ -233,7 +233,7 @@
 
 	/* 25: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.word	2313728
+	.word	2379776
 	/* loaded */
 	.byte	0
 	/* data */
@@ -683,7 +683,7 @@
 
 	/* 75: Xamarin.Android.Support.Compat.dll */
 	/* uncompressed_file_size */
-	.word	424960
+	.word	427520
 	/* loaded */
 	.byte	0
 	/* data */
@@ -692,7 +692,7 @@
 
 	/* 76: Xamarin.Android.Support.CoordinaterLayout.dll */
 	/* uncompressed_file_size */
-	.word	65024
+	.word	65536
 	/* loaded */
 	.byte	0
 	/* data */
@@ -746,7 +746,7 @@
 
 	/* 82: Xamarin.Android.Support.Design.dll */
 	/* uncompressed_file_size */
-	.word	187392
+	.word	188416
 	/* loaded */
 	.byte	0
 	/* data */
@@ -773,7 +773,7 @@
 
 	/* 85: Xamarin.Android.Support.Fragment.dll */
 	/* uncompressed_file_size */
-	.word	142848
+	.word	143872
 	/* loaded */
 	.byte	0
 	/* data */
@@ -881,7 +881,7 @@
 
 	/* 97: Xamarin.Android.Support.v7.AppCompat.dll */
 	/* uncompressed_file_size */
-	.word	441344
+	.word	442880
 	/* loaded */
 	.byte	0
 	/* data */
@@ -899,7 +899,7 @@
 
 	/* 99: Xamarin.Android.Support.v7.RecyclerView.dll */
 	/* uncompressed_file_size */
-	.word	397824
+	.word	398848
 	/* loaded */
 	.byte	0
 	/* data */
@@ -998,7 +998,7 @@
 
 	/* 110: mscorlib.dll */
 	/* uncompressed_file_size */
-	.word	2217472
+	.word	2217984
 	/* loaded */
 	.byte	0
 	/* data */
