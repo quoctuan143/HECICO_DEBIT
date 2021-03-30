@@ -11,7 +11,7 @@
              xmlns:carousoul="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              xmlns:sfbutton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
              Visual="Material"
-             BackgroundImageSource="login.png"                
+            BackgroundColor="Black"              
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
 
@@ -19,13 +19,13 @@
 
             <AbsoluteLayout BackgroundColor="Transparent"  HeightRequest="200"                               
                                >
-                <Image Source="money.png" Aspect="AspectFit" 
+                <Image Source="logo.png" Aspect="AspectFit" 
                            AbsoluteLayout.LayoutFlags="PositionProportional"
-                           AbsoluteLayout.LayoutBounds="0.8,0.4,50,50"
-                           WidthRequest="50" HeightRequest="50"/>
+                           AbsoluteLayout.LayoutBounds="0.8,0.4,70,70"
+                           WidthRequest="70" HeightRequest="70"/>
                 <Label Text="Hecico Debit" Style="{StaticResource styleLableWhite}"
-                           FontSize="40"
-                           FontAttributes="Bold,Italic"
+                           FontSize="32"
+                           FontAttributes="Bold"
                            AbsoluteLayout.LayoutFlags="PositionProportional"
                            AbsoluteLayout.LayoutBounds="0.5,0.8,300,100"
                            HorizontalOptions="FillAndExpand"
@@ -39,12 +39,12 @@
                 <Label Text="{Binding FullName}" Style="{StaticResource styleLableWhite}"
                        HorizontalTextAlignment="Center"
                        Margin="{OnPlatform Android= '0,10,0,0' , iOS='0,20,0,0'}"                        
-                       FontSize="24"/>
+                       FontSize="20"/>
                 <Label Text="{Binding PhoneNumber}" Style="{StaticResource styleLableWhite}"
                        
                        HorizontalTextAlignment="Center"
                        Margin="{OnPlatform Android= '0,5,0,0' , iOS='0,10,0,0'}"
-                       FontSize="20"/>
+                       FontSize="16"/>
             </StackLayout>
 
             <StackLayout Margin="{OnPlatform Android='0,15,0,0' , iOS= '0,30,0,0'} " BackgroundColor="Transparent">
@@ -89,6 +89,12 @@
                         </TapGestureRecognizer>
                     </Image.GestureRecognizers>
                 </Image>
+            </StackLayout>
+            
+            <StackLayout BackgroundColor="Transparent" Margin="0,10,0,30" VerticalOptions="EndAndExpand"
+                         Padding="20">
+                <Label Text="Thông báo:" Style="{StaticResource styleLableWhite}" FontSize="14"/>
+                <Label Text="{Binding THONG_BAO}"  FontSize="17" Style="{StaticResource styleLableWhite}"/>
             </StackLayout>
         </StackLayout>
 

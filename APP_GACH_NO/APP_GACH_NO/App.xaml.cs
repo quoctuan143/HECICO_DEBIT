@@ -42,7 +42,7 @@ namespace APP_GACH_NO
         private async void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             DemNguoc += 1;
-            if (DemNguoc > 120)
+            if (DemNguoc > 600)
             {
                 var page = Shell.Current.CurrentItem;
                 if (page.Route.Contains("Login") == true) return;
@@ -64,7 +64,7 @@ namespace APP_GACH_NO
 
         protected override void OnResume()
         {
-            if (DemNguoc < 120)
+            if (DemNguoc < 600)
             {
                 DemNguoc = 0;
             }

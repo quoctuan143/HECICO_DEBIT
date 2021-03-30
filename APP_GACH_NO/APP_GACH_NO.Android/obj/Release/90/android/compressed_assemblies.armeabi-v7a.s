@@ -37,7 +37,7 @@
 
 	/* 1: APP_GACH_NO.dll */
 	/* uncompressed_file_size */
-	.long	1476096
+	.long	1477120
 	/* loaded */
 	.byte	0
 	/* data */

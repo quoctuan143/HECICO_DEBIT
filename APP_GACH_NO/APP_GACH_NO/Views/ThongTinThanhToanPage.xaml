@@ -63,7 +63,7 @@
                                VerticalTextAlignment="Center"/>
                         <Label Text="{Binding CongNoKhachHang.DIEN_TTHU , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
                                HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
-                               FontSize="20"/>
+                               FontSize="25"/>
                         <Label Text="kwh" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
@@ -72,7 +72,7 @@
                         <Label Text="{Binding CongNoKhachHang.TIEN_DIEN , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
                                HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
                                FontSize="20"/>
-                        <Label Text="đ" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                        
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
                         <Label Text="Tiền thuế" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
@@ -80,7 +80,7 @@
                         <Label Text="{Binding CongNoKhachHang.TIEN_THUE , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
                                HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
                                FontSize="20"/>
-                        <Label Text="đ" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                        
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
                         <Label Text="{Binding CongNoKhachHang.NOI_DUNG}" Style="{StaticResource styleLableGreen}" HorizontalOptions="Start" FontSize="16" 
@@ -88,7 +88,7 @@
                         <Label Text="{Binding CongNoKhachHang.TONG_TIEN , StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 
                                HorizontalOptions="EndAndExpand" FontAttributes="Bold"  VerticalTextAlignment="Center"
                                FontSize="25"/>
-                        <Label Text="đ" FontAttributes="Bold" VerticalTextAlignment="Center" Style="{StaticResource styleLableGreen}"/>
+                       
                     </StackLayout>
 
                     <Label Text="{Binding CongNoKhachHang.TIEN_BANG_CHU, StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" 

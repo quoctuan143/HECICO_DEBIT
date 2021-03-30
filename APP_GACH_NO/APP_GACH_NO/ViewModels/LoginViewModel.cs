@@ -23,6 +23,7 @@ namespace APP_GACH_NO.ViewModels
         string _phonenumber;
         string _fullname;
         string _password;
+        string _thongbao;
         ObservableCollection<User> _user;
         public Command LoginCommand { get; }
         public Command FingerComand { get; }
@@ -46,6 +47,7 @@ namespace APP_GACH_NO.ViewModels
         }
         public string Password { get => _password; set { SetProperty(ref _password, value); } }
         public string FullName { get => _fullname; set { SetProperty(ref _fullname, value); } }
+        public string THONG_BAO { get => _thongbao ; set { SetProperty(ref _thongbao, value); } }
         public LoginViewModel()
         {
             
@@ -53,6 +55,12 @@ namespace APP_GACH_NO.ViewModels
             var _json = Config.client.GetStringAsync(str).Result;
             _json = _json.Replace("\\r\\n", "").Replace("\\", "").Replace("\"","");
             FullName = _json;
+
+             str = Config.Url + "api/Hecico/GetThongBao?mathungan=" + Preferences.Get(Config.PhoneNumber, "");
+             _json = Config.client.GetStringAsync(str).Result;
+            _json = _json.Replace("\\r\\n", "").Replace("\\", "").Replace("\"", "");
+            THONG_BAO = _json;
+
             PhoneNumber = Preferences.Get(Config.PhoneNumber, "");
             IsPasswordShow = true;
             LoginCommand = new Command(OnLoginClicked, ValidateLogin);
